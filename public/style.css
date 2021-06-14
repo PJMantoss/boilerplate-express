@@ -8,3 +8,7 @@ body {
   h1 {
     font-size: 4em;
   }
+
+  input[type=text], label {
+    margin-bottom: 8px;
+  }
