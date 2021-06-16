@@ -7,6 +7,6 @@ app.get("/", (req, res) => {
     res.sendFile(path);
 })
 
-app.use(express.static(publicPath))
+app.use("/public", express.static(publicPath))
 
  module.exports = app;
