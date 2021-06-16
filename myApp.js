@@ -4,6 +4,7 @@ let path = __dirname + '/views/index.html';
 let publicPath = __dirname + '/public';
 
 let hiJSON = {"message": "Hello json"};
+let hiJSON2 = {"message": "HELLO JSON"};
 
 app.use(express.static(publicPath));
 
