@@ -3,10 +3,13 @@ var app = express();
 let path = __dirname + '/views/index.html';
 let publicPath = __dirname + '/public';
 
+app.use(express.static(publicPath));
+
+// Assets at the /public route
+app.use("/public", express.static(publicPath));
+
 app.get("/", (req, res) => {
     res.sendFile(path);
 })
 
-app.use("/public", express.static(publicPath))
-
- module.exports = app;
+module.exports = app;
