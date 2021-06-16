@@ -12,6 +12,7 @@ app.use(express.static(publicPath));
 app.use("/public", express.static(publicPath));
 
 app.get("/json", (req, res) => {
+    if(process.env.MESSAGE_STYLE === uppercase){}else{}
     res.json(hiJSON);
 })
 
