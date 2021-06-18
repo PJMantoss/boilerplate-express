@@ -3,6 +3,11 @@ var app = express();
 let path = __dirname + '/views/index.html';
 let publicPath = __dirname + '/public';
 
+
+app.use(function(req, res, next){
+    
+  })
+
 app.use(express.static(publicPath));
 
 // Assets at the /public route
