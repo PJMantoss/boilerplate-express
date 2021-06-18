@@ -15,7 +15,7 @@ app.use(express.static(publicPath));
 app.use("/public", express.static(publicPath));
 
 app.get("/name", (req, res) => {
-    res.send();
+    res.send({name: req.query.first + " " + req.query.last});
 })
 
 //Challenge 7 - Get Route Parameter Input from the Client
