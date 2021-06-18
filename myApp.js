@@ -14,6 +14,7 @@ app.use(express.static(publicPath));
 // Assets at the /public route
 app.use("/public", express.static(publicPath));
 
+//Challenge 8 - Get Query Parameter Input from the Client
 app.get("/name", (req, res) => {
     res.send({name: req.query.first + " " + req.query.last});
 })
