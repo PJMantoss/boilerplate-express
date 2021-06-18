@@ -14,6 +14,8 @@ app.use(express.static(publicPath));
 // Assets at the /public route
 app.use("/public", express.static(publicPath));
 
+app.get("/:word/echo", (req, res) => {})
+
 //Challenge 6 - Chain Middleware to Create a Time Server
 app.get("/now", (req, res, next) => {
     req.time = new Date().toString();
