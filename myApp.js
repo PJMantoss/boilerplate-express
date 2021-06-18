@@ -14,6 +14,8 @@ app.use(express.static(publicPath));
 // Assets at the /public route
 app.use("/public", express.static(publicPath));
 
+app.get("/name", (req, res) => {})
+
 //Challenge 7 - Get Route Parameter Input from the Client
 app.get("/:word/echo", (req, res) => {
     res.send({echo: req.params.word});
