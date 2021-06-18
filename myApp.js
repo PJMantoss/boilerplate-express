@@ -15,7 +15,7 @@ app.use(express.static(publicPath));
 app.use("/public", express.static(publicPath));
 
 app.get("/json", (req, res) => {
-  const mySecret = process.env['MESSAGE_STYLE']
+  //const mySecret = process.env['MESSAGE_STYLE']
 
     if(mySecret === "uppercase"){
         res.json({"message": "Hello json".toUpperCase()});
