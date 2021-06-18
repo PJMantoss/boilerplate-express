@@ -17,7 +17,7 @@ app.use("/public", express.static(publicPath));
 app.get("/now", (req, res, next) => {
     req.time = new Date().toString();
     next();
-})
+}, (req, res) => {})
 
 app.get("/json", (req, res) => {
   //const mySecret = process.env['MESSAGE_STYLE']
