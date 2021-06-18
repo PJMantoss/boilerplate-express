@@ -3,7 +3,7 @@ var app = express();
 let path = __dirname + '/views/index.html';
 let publicPath = __dirname + '/public';
 
-
+//Challenge 5 - root-level request logger middleware
 app.use(function(req, res, next){
     console.log(`${req.method} ${req.path} - ${req.ip} `);
     next();
