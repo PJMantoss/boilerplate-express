@@ -14,7 +14,10 @@ app.use(express.static(publicPath));
 // Assets at the /public route
 app.use("/public", express.static(publicPath));
 
-app.get("/now", (req, res, next) => {})
+app.get("/now", (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+})
 
 app.get("/json", (req, res) => {
   //const mySecret = process.env['MESSAGE_STYLE']
