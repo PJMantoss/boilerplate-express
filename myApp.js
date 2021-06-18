@@ -18,7 +18,9 @@ app.get("/now", (req, res, next) => {
     req.time = new Date().toString();
     next();
 }, (req, res) => {
-    setTimeout(() => {}, 2000)
+    setTimeout(() => {
+        res.send({time: req.time});
+    }, 2000)
 })
 
 app.get("/json", (req, res) => {
