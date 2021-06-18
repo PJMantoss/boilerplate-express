@@ -5,7 +5,8 @@ let publicPath = __dirname + '/public';
 
 
 app.use(function(req, res, next){
-    
+    console.log(`${req.method} ${req.path} - ${req.ip} `);
+    next();
   })
 
 app.use(express.static(publicPath));
