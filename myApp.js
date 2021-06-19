@@ -19,6 +19,11 @@ app.use(express.static(publicPath));
 // Assets at the /public route
 app.use("/public", express.static(publicPath));
 
+//Challenge 3 - Serve an HTML File
+app.get("/", (req, res) => {
+    res.sendFile(path);
+})
+
 //Challenge - Get Query Parameter Input from the Client
 app.get("/name", (req, res) => {
     res.send({name: req.query.first + " " + req.query.last});
