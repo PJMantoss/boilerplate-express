@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 app.use(express.static(publicPath));
 
-// Assets at the /public route
+//Challenge 4 - Serve static Assets
 app.use("/public", express.static(publicPath));
 
 //Challenge 3 - Serve an HTML File
