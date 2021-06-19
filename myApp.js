@@ -8,7 +8,7 @@ let publicPath = __dirname + '/public';
 //Challenge - Use body-parser to Parse POST Requests
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//Challenge - root-level request logger middleware
+//Challenge 7 - Implement a Root-Level Request Logger Middleware
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.path} - ${req.ip} `);
     next();
@@ -44,7 +44,7 @@ app.get("/now", (req, res, next) => {
     }, 2000)
 })
 
-//Challenge 5 - Serve JSON on a Specific Route
+//Challenge 5 & 6 - Serve JSON on a Specific Route
 app.get("/json", (req, res) => {
   //const mySecret = process.env['MESSAGE_STYLE']
 
