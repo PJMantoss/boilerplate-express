@@ -24,17 +24,17 @@ app.get("/", (req, res) => {
     res.sendFile(path);
 })
 
-//Challenge - Get Query Parameter Input from the Client
+//Challenge 10 - Get Query Parameter Input from the Client
 app.get("/name", (req, res) => {
     res.send({name: req.query.first + " " + req.query.last});
 })
 
-//Challenge - Get Route Parameter Input from the Client
+//Challenge 9 - Get Route Parameter Input from the Client
 app.get("/:word/echo", (req, res) => {
     res.send({echo: req.params.word});
 })
 
-//Challenge - Chain Middleware to Create a Time Server
+//Challenge 8 - Chain Middleware to Create a Time Server
 app.get("/now", (req, res, next) => {
     req.time = new Date().toString();
     next();
