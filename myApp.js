@@ -24,6 +24,11 @@ app.get("/", (req, res) => {
     res.sendFile(path);
 })
 
+//Challenge 12
+app.post("/name", (req, res) => {
+    res.json({name: req.body.first + " " + req.body.last})
+})
+
 //Challenge 10 - Get Query Parameter Input from the Client
 app.get("/name", (req, res) => {
     res.send({name: req.query.first + " " + req.query.last});
