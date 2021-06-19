@@ -5,7 +5,7 @@ let bodyParser = require('body-parser');
 let path = __dirname + '/views/index.html';
 let publicPath = __dirname + '/public';
 
-//Challenge - Use body-parser to Parse POST Requests
+//Challenge 11 - Use body-parser to Parse POST Requests
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Challenge 7 - Implement a Root-Level Request Logger Middleware
